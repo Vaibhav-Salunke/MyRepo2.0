@@ -16,14 +16,14 @@ public class validLoginTestCase {
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		driver.get("http://laptop-knl22f4g/login.do");
+		driver.get("http://127.0.0.1/login.do");
 
 		// read the data from excel file and test the login page
 		
 		Flib flib = new Flib();  
 		
-		driver.findElement(By.name("username")).sendKeys(flib.readExcelData("./data/ActiTimeTestData.xlsx","validcreds",1,0));
-		driver.findElement(By.name("pwd")).sendKeys(flib.readExcelData("./data/ActiTimeTestData.xlsx","validcreds",1,1));
+		driver.findElement(By.name("username")).sendKeys(flib.readExcelData("./data/ActitimeTestData.xlsx","validcreds",1,0));
+		driver.findElement(By.name("pwd")).sendKeys(flib.readExcelData("./data/ActitimeTestData.xlsx","validcreds",1,1));
 		driver.findElement(By.id("loginButton")).click();
 
 	}

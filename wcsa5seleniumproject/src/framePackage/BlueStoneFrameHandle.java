@@ -28,12 +28,12 @@ public class BlueStoneFrameHandle {
 		
 		Thread.sleep(2000);
 		// identify frame by using xpath
-		WebElement farmeElement = driver.findElement(By.xpath("//iframe[@id='fc_widget']"));
+		WebElement frameElement = driver.findElement(By.xpath("//iframe[@id='fc_widget']"));
 		
 		// handle the frame by switch the controls to frame ...
 //		driver.switchTo().frame(5); // handle frame by using index
 //		driver.switchTo().frame("fc_widget"); // handle frame by using nameOrId.
-		driver.switchTo().frame(farmeElement);
+		driver.switchTo().frame(frameElement);
 		
 		WebElement chatBox = driver.findElement(By.id("chat-icon"));
 		chatBox.click();

@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 	
-	// it is a webelement repository
+	// it is a web element repository
 	
 	@FindBy(xpath="//*[@name='username']") private WebElement usnTB;
 	@FindBy(xpath = "//*[@name='pwd']") private WebElement pssTB;
@@ -16,7 +16,7 @@ public class LoginPage {
 	@FindBy(partialLinkText = "Actimind Inc.") private WebElement actiMindLink;
 	
 	
-	//intialization
+	//initialization
 	
 	
      public LoginPage(WebDriver driver)
@@ -27,7 +27,7 @@ public class LoginPage {
 
 	
 	
-	// utilaization
+	// utilization
 
 
 
@@ -71,7 +71,14 @@ public class LoginPage {
  		pssTB.sendKeys(validPassword);
  		loginButton.click();
  	}
-
-
+ 	
+ 	public void invalidLoginMethod(String invalidUsername,String invalidPassword) throws InterruptedException
+ 	{
+ 		usnTB.sendKeys(invalidUsername);
+ 		pssTB.sendKeys(invalidPassword);
+ 		loginButton.click();
+ 		Thread.sleep(2000);
+ 		usnTB.clear();
+ 	}
 
 }

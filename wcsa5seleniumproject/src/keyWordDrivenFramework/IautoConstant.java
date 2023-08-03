@@ -2,7 +2,7 @@ package keyWordDrivenFramework;
 
 public interface IautoConstant {
 	
-	String 	EXCEL_PATH="./data/ActiTimeTestData.xlsx";
+	String 	EXCEL_PATH="./data/ActitimeTestData.xlsx";
 	String  PROP_PATH="./data/config.properties";
 	
 	String CHROME_KEY="webdriver.chrome.driver";
